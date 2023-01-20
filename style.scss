@@ -1,0 +1,286 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+    color:$fBlack;
+    margin:0;
+}
+//HEADER
+header{
+    height: 100vh ;  
+    background-image: url(/images/img1.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    
+    .headcontainer{
+        padding: 5px;
+        border: 1px solid $fGrey;
+        height: 7vh; 
+    }
+    nav{
+        width: 70%;
+        display: inline-block;
+    }
+
+    input{
+        margin-left: 40px;
+        height: 5vh;
+        font-size: 1rem;
+        width: 25%;
+        border: 1px solid $fGrey;
+        background-color: transparent;
+    }
+
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end; 
+    }
+    li{
+        padding-left: 20px;
+    }
+
+    a{
+       text-decoration: none;
+       color:$fBlack;
+       padding:10px 10px;
+       border-radius: 15%;
+       &:hover{
+           background-color: $fBlack;
+           color:$fWhite;
+           transition: all 0.5s 0s ease-in-out;
+       }
+    }
+
+    .parentTitle{
+        width:100%;
+        height: 90vh;
+        line-height: 1.5;
+    }
+
+    h1{
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .childTitle1{
+        background-color: $bwhite;
+        position:relative; //me provu dyjat absolut
+        display: inline-block;
+        padding-right: 1%;
+        z-index: 0;
+        position:absolute;
+        bottom: 120px;
+
+    }
+    .childTitle2{
+        background-color: $byellow;
+        display: inline-block;
+        padding-right: 1%;
+        z-index: 1;
+        position:absolute;
+        bottom: 75px;
+    }
+}
+
+
+//Section 1 - About us
+#about{
+    .about{
+    font-weight: 500;
+    height: 100vh;
+    background-color: $bwhite;
+    position:relative;
+    
+    .bg-1{
+        background-color: $byellow;
+        height: 90vh;
+        width: 40%;
+        margin: 5% auto; 
+    }
+
+    summary{
+        border: 5px solid $fBlack;
+        background-color: $bwhite;
+        letter-spacing: 2px;
+        padding: 30px;
+        width: 28%;
+        position: absolute;
+        margin: 0 auto;
+        left:5%;
+        top:25%;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    blockquote{
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    img{
+        height: 80vh;
+        position: absolute;
+        right: 28%;
+        top: 5%;
+    }
+    }
+}
+
+//Section 2 - ABOUT PART 2
+.aboutflex{
+    width:100%;
+    height: 300px;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content:space-around; //space-between del error
+    background-color: $bwhite
+    
+
+   
+
+    img{
+        width: 350px;
+    }
+
+    .quotettext{
+        border: 5px solid $fBlack;
+        background-color: $bwhite;
+        padding: 10px;
+        width: 350px;
+        //font-weight: 100;
+    
+    }
+    
+    h2{
+        font-size: 24px;
+        font-weight: 400;
+        padding: 15% 5% 5% 5%;
+    }
+    blockquote{
+        font-weight: 300;
+        padding: 0% 5%;
+    }
+
+}
+
+//Section 3 - Time to make a differences
+.theChange{
+    width:100%;
+    height: 100vh;
+    background-image: url(/images/img5.jpeg);
+    background-size:100%;
+    background-position: 50% 90%;
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding:50px 50px;
+
+    summary{
+        width: 43%;
+        margin-bottom: 50px;
+    }
+
+    h2{
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    blockquote{
+        font-size: 16;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------
+// //HEADER
+// header{
+//     width: 100%;
+//     height: 100vh ;  
+//     //background-image: url(/images/img1.jpeg);
+//     background-size:contain;
+//     display: grid;
+
+//     nav{
+//         padding:1px 10px;
+//         border: solid $fGrey 1px;
+//         height: 60px;
+//         input{
+//             width: 200px;
+//             border-radius: 5%;
+//             background-color: transparent;
+//             
+//             height: 2rem;
+//             font-size: medium;
+//         }
+//     }
+    
+//     ul{
+//     display: grid;
+//     grid-template-columns: 6fr 1fr 1fr 1fr;
+//     list-style: none;
+//         a{
+//             text-decoration: none;
+//             color:$fBlack;
+//             padding:10px 10px;
+//             border-radius: 15%;
+//             &:hover{
+//                 background-color: $fBlack;
+//                 color:$fWhite;
+//                 transition: all 0.5s 0s ease-in-out;
+//             }
+//         }
+//     }
+
+//     title{
+        
+//         line-height: 1.4;
+//         display: flex;
+//         font-size: 2rem;
+               
+//     }
+//     .titleWhite{
+//         background-color: $bwhite;
+//         display: inline-block;
+//         padding: 10px 20px 5px 0px;
+        
+//         font-weight: 700; 
+//     }
+
+//     .titleYellow{
+//         background-color: $byellow;
+//         display: inline-block;
+//         padding: 10px 20px 5px 0px;
+//         margin-top:-80px;
+//         font-weight: 700;
+//     }
+    
+    
+// }
