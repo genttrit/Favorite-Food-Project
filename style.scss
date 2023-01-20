@@ -201,86 +201,186 @@ header{
 
 }
 
+//Section 4 - TASTY
+.tasty{
+    font-weight: 500;
+    height: 90vh;
+    background-color: $bwhite;
+    margin-top: 10vh;
+    position:relative;
 
+    .bg-2{
+        background-color: $byellow;
+        height: 200px;
+        width: 100%;
+        background-position: center center; 
+        position: absolute;
+        top: 15%;
+    }   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-------------------------
-// //HEADER
-// header{
-//     width: 100%;
-//     height: 100vh ;  
-//     //background-image: url(/images/img1.jpeg);
-//     background-size:contain;
-//     display: grid;
-
-//     nav{
-//         padding:1px 10px;
-//         border: solid $fGrey 1px;
-//         height: 60px;
-//         input{
-//             width: 200px;
-//             border-radius: 5%;
-//             background-color: transparent;
-//             
-//             height: 2rem;
-//             font-size: medium;
-//         }
-//     }
+    img{
+        width: 300px;
+        z-index: 1;
+    }
     
-//     ul{
-//     display: grid;
-//     grid-template-columns: 6fr 1fr 1fr 1fr;
-//     list-style: none;
-//         a{
-//             text-decoration: none;
-//             color:$fBlack;
-//             padding:10px 10px;
-//             border-radius: 15%;
-//             &:hover{
-//                 background-color: $fBlack;
-//                 color:$fWhite;
-//                 transition: all 0.5s 0s ease-in-out;
-//             }
-//         }
-//     }
+    .img-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
 
-//     title{
-        
-//         line-height: 1.4;
-//         display: flex;
-//         font-size: 2rem;
-               
-//     }
-//     .titleWhite{
-//         background-color: $bwhite;
-//         display: inline-block;
-//         padding: 10px 20px 5px 0px;
-        
-//         font-weight: 700; 
-//     }
+    summary{
+        width: 50%;
+        margin: 10px auto;
+        line-height: 1.1;
+        text-align: center;
+    }
 
-//     .titleYellow{
-//         background-color: $byellow;
-//         display: inline-block;
-//         padding: 10px 20px 5px 0px;
-//         margin-top:-80px;
-//         font-weight: 700;
-//     }
+    h4{
+        font-size: 36px;
+        font-weight: 300;
+        //letter-spacing: 1px;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+
+    blockquote{
+        font-size: 16;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+
+    button{
+       color:$fWhite;
+       background-color: $fBlack;
+       padding:10px 10px;
+       letter-spacing: 1px;
+       width: 150px;
+       margin-bottom: 50px;
+       
+       &:hover{
+           background-color: $fWhite;
+           color:$fBlack;
+           transition: all 0.5s 0s ease-in-out;
+       }
+    }
+}
+
+//Section 5 - Organic Restaurants 
+#organic{
+    margin-top: 100px;
+    .organic{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        background-color: $bwhite
+    }
+
+    .bg-3{
+        display: inline-block;
+        background-image: url(/images/img8.jpeg);
+        width: 450px;
+        height: 400px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: -50px;
+    }
+    .bg-4{
+        background-image: url(/images/img9.jpeg);
+        display: inline-block;
+        width: 450px;
+        height: 400px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: -50px;
+    }
+
+    .quotettext{
+        border: 5px solid $fBlack;
+        background-color: $bwhite;
+        // padding: 10px;
+        width: 450px;
+        height: 75%;
+        text-align: center;
+        //font-weight: 100;
     
+    }
     
-// }
+    h2{
+        font-size: 24px;
+        font-weight: 400;
+        padding: 15% 5% 0% 5%;
+    }
+    
+    blockquote{
+        font-weight: 300;
+        padding: 0% 5% 5% 5%;
+    }
+}
+
+//Section 6 - Footer
+footer{
+    width: 100%;
+    background-image: url(/images/img10.jpeg);
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    overflow:hidden;
+    
+
+    .footer-container{
+        height:75%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    a{
+        padding: 15px;
+    }
+
+    img{
+        height: 30px;
+    }
+     h4{
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    
+}
+
+
+.footer-end{
+    background-color:$bGrey;     
+    //height: 100px;
+    width: 100%;
+    padding-top:5px;
+    padding-bottom: 30px;
+//    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    h4{
+        margin-top: 50px;
+        color: $fWhite;
+        font-weight: 400;
+        font-size: 22px;
+    }
+
+    span{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    a{
+        color: $fWhite;
+        text-decoration: none;
+    }
+    }
