@@ -394,7 +394,6 @@ footer h4 {
   #menu .menuContainer {
     position: relative;
     height: 800px;
-    background-color: red;
     overflow: hidden;
   }
   #menu .bg-1 {
@@ -406,7 +405,6 @@ footer h4 {
   #menu .menuflex {
     flex-wrap: wrap;
     margin-top: 50px;
-    gap: 50px;
   }
   #menu h1 {
     font-size: 1.85rem;
@@ -423,7 +421,7 @@ footer h4 {
     height: auto;
   }
   #varieties {
-    margin-top: 200px;
+    margin-top: 300px;
   }
   #varieties .varieties-container {
     width: 340px;
@@ -462,7 +460,7 @@ footer h4 {
     margin-bottom: 20px;
   }
   .theChange h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .theChange blockquote {
     font-size: 14px;

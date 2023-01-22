@@ -23,7 +23,6 @@
         .menuContainer{
             position: relative;
             height: 800px;
-            background-color: red;
             overflow: hidden;
         }
         .bg-1{
@@ -37,7 +36,6 @@
         .menuflex{
             flex-wrap: wrap;
             margin-top: 50px;
-            gap: 50px;
         }
 
         h1{
@@ -62,7 +60,7 @@
 
     //Section 2 - About part2
     #varieties{
-        margin-top: 200px;
+        margin-top: 300px;
         .varieties-container{
             width: 340px;
             height: auto;
@@ -109,7 +107,7 @@
         }
     
         h2{
-            font-size: 1.75rem;
+            font-size: 1.5rem;
         }
     
         blockquote{
@@ -196,6 +194,7 @@
         .footer-container{
             background-size: contain;
             width: auto;
+
         }
         img{
             height: 20px;
