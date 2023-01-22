@@ -1,12 +1,16 @@
 @import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+html{
+scroll-behavior: smooth;
+    }
 *{
     box-sizing: border-box;
     font-family: 'Roboto', 'sans-serif';
     color:$fBlack;
     margin:0;
 }
+
 //HEADER
 header{
     height: 100vh ;  
@@ -18,29 +22,40 @@ header{
     .headcontainer{
         padding: 5px;
         border: 1px solid $fGrey;
-        height: 7vh; 
-    }
-    nav{
-        width: 70%;
-        display: inline-block;
+        background-color: rgba($color: #ffffff, $alpha: 0.4)
     }
 
     input{
-        margin-left: 40px;
+        margin-left: 20px;
         height: 5vh;
         font-size: 1rem;
-        width: 25%;
+        display: inline;
         border: 1px solid $fGrey;
         background-color: transparent;
+    }
+
+    nav{
+        display: inline-block;
+        position:absolute;
+        right:10px;
+        margin:0;
+    }
+
+    img{
+        visibility:hidden;
+        position:absolute;
+        top: 5px;
+        left:20px;
     }
 
     ul{
         list-style-type: none;
         display: flex;
         justify-content: flex-end; 
+        margin: 5px 0;
     }
     li{
-        padding-left: 20px;
+        padding-left: 5px;
     }
 
     a{
@@ -48,6 +63,8 @@ header{
        color:$fBlack;
        padding:10px 10px;
        border-radius: 15%;
+       
+       
        &:hover{
            background-color: $fBlack;
            color:$fWhite;
@@ -68,7 +85,7 @@ header{
 
     .childTitle1{
         background-color: $bwhite;
-        position:relative; //me provu dyjat absolut
+        //position:relative; //me provu dyjat absolut
         display: inline-block;
         padding-right: 1%;
         z-index: 0;
@@ -80,7 +97,7 @@ header{
         background-color: $byellow;
         display: inline-block;
         padding-right: 1%;
-        z-index: 1;
+        //z-index: 1;
         position:absolute;
         bottom: 75px;
     }
@@ -88,102 +105,160 @@ header{
 
 
 //Section 1 - About us
-#about{
+#menu{
     .about{
     font-weight: 500;
-    height: 100vh;
+    height: 94vh;
     background-color: $bwhite;
-    position:relative;
-    
+    margin: 3% auto;
+    }
+    .menuContainer{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
     .bg-1{
         background-color: $byellow;
         height: 90vh;
-        width: 40%;
-        margin: 5% auto; 
+        width: 50%;
+        position:absolute;
+        left: 25%;
+    }
+
+    .menuflex{
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
     }
 
     summary{
         border: 5px solid $fBlack;
         background-color: $bwhite;
-        letter-spacing: 2px;
-        padding: 30px;
-        width: 28%;
-        position: absolute;
-        margin: 0 auto;
-        left:5%;
-        top:25%;
+        letter-spacing: 1px;
+        padding: 20px;
+        width: 350px;
+        height: 300px;
+        z-index: 1;
     }
 
     h1{
         font-size: 2rem;
         font-weight: 400;
+        padding-bottom: 20px;
     }
 
-    blockquote{
-        font-weight: 300;
-        font-size: 1rem;
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.7;
     }
 
     img{
-        height: 80vh;
-        position: absolute;
-        right: 28%;
-        top: 5%;
-    }
+        height: 550px;
+        z-index:1;
     }
 }
 
 //Section 2 - ABOUT PART 2
-.aboutflex{
-    width:100%;
-    height: 300px;
-    margin-bottom: 10vh;
-    display: flex;
-    justify-content:space-around; //space-between del error
-    background-color: $bwhite
-    
+#varieties{
+    .varieties-container{
+        width: 1300px;
+        height: 300px;
+        display: grid;
+        gap:5px;
+        grid-template-columns: repeat(4,1fr);
+        margin: 25px auto; 
+    }
 
-   
+    .child{
+        width: 350;
+        height: 315px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .childimg{
+        overflow: hidden;
+    }
 
     img{
-        width: 350px;
+        height: 315px;
+    };
+
+    .childtext{
+        border: solid 5px black;
     }
 
-    .quotettext{
-        border: 5px solid $fBlack;
-        background-color: $bwhite;
-        padding: 10px;
-        width: 350px;
-        //font-weight: 100;
-    
-    }
-    
-    h2{
+    h3{
         font-size: 24px;
         font-weight: 400;
-        padding: 15% 5% 5% 5%;
+        padding: 25px 25px 0 25px;
+        line-height: 1.3;
     }
+
     blockquote{
-        font-weight: 300;
-        padding: 0% 5%;
+        font-weight: 400;
+        padding: 0 25px;
+        margin: 0;
+        line-height: 1.9;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+// .aboutflex{
+//     width:100%;
+//     height: 300px;
+//     margin-bottom: 10vh;
+//     display: grid;
+//     grid-template: 1fr / repeat(4,1fr);
+//     justify-content:space-around; //space-between del error
+//     background-color: $bwhite;
+//     }       
+    // img{
+    //     width: 100%;
+    //     height:auto;
+    // }
+    // .quotettext{
+    //     border: 5px solid $fBlack;
+    //     background-color: $bwhite;
+    //     padding: 10px;
+    //     width: 25%;
+    //     //font-weight: 100;
+    
+    // }
+    
+  
 
 }
 
 //Section 3 - Time to make a differences
 .theChange{
-    width:100%;
+    width:1300px;
     height: 100vh;
+    margin: 0 auto;
     background-image: url(/images/img5.jpeg);
     background-size:100%;
-    background-position: 50% 90%;
+    background-position: 50% 100%;
     display: flex;
     flex-direction: column-reverse;
 
-    padding:50px 50px;
+
+    padding: 0px 50px;
 
     summary{
-        width: 43%;
+        width: 600px;
         margin-bottom: 50px;
     }
 
@@ -197,36 +272,52 @@ header{
 
     blockquote{
         font-size: 16;
+        margin: 0;
     }
 
 }
 
 //Section 4 - TASTY
-.tasty{
-    font-weight: 500;
-    height: 90vh;
-    background-color: $bwhite;
-    margin-top: 10vh;
-    position:relative;
-
-    .bg-2{
-        background-color: $byellow;
-        height: 200px;
+#tasty{
+    .tasty-container{
+        font-weight: 500;
+        height: 500px;
         width: 100%;
-        background-position: center center; 
-        position: absolute;
-        top: 15%;
-    }   
-
-    img{
-        width: 300px;
-        z-index: 1;
+        background-color: $bwhite;
+        margin-top: 30px;
+        position:relative;
     }
-    
-    .img-container{
+    .tasty-bg{
+        background-color: $byellow;
         width: 100%;
+        height: 250px;
+        margin: auto 0;
+        position: absolute;
+        top:125px;
+    }
+
+    .tasty-parent{
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
         display: flex;
-        justify-content: space-around;
+        align-items: center;
+        justify-content: space-between;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: 50% 55%;
+        scale: 1.1;
+    }
+
+
+    .tasty-child{
+        z-index: 1;
+        width: 400px;
+        height: 400px;
+        overflow: hidden;        
     }
 
     summary{
@@ -236,18 +327,17 @@ header{
         text-align: center;
     }
 
-    h4{
+    h2{
         font-size: 36px;
-        font-weight: 300;
-        //letter-spacing: 1px;
-        padding-top: 60px;
-        padding-bottom: 20px;
+        font-weight: 400;
     }
 
     blockquote{
-        font-size: 16;
+        font-size: 16px;
         font-weight: 300;
         padding-bottom: 20px;
+        letter-spacing: 1px;
+        line-height: 1.5;
     }
 
     button{
@@ -255,7 +345,7 @@ header{
        background-color: $fBlack;
        padding:10px 10px;
        letter-spacing: 1px;
-       width: 150px;
+       width: 200px;
        margin-bottom: 50px;
        
        &:hover{
@@ -268,62 +358,64 @@ header{
 
 //Section 5 - Organic Restaurants 
 #organic{
-    margin-top: 100px;
-    .organic{
+    background-color: $bwhite;
+    .organic-parent{
+        
         width: 100%;
         height: 400px;
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
-        background-color: $bwhite
     }
 
-    .bg-3{
-        display: inline-block;
-        background-image: url(/images/img8.jpeg);
-        width: 450px;
+    .organic-child{
+        width: 400px;
         height: 400px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-left: -50px;
-    }
-    .bg-4{
-        background-image: url(/images/img9.jpeg);
-        display: inline-block;
-        width: 450px;
-        height: 400px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-right: -50px;
+        margin: auto 0;
     }
 
-    .quotettext{
+    img{
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: 20% 50%;
+    }
+
+    .organic-text{
         border: 5px solid $fBlack;
-        background-color: $bwhite;
-        // padding: 10px;
         width: 450px;
-        height: 75%;
+        height: 400px;
         text-align: center;
-        //font-weight: 100;
     
+        img{
+            width: 50px;
+            height: auto;
+            margin: 0;
+        }
     }
-    
+
     h2{
-        font-size: 24px;
+        font-size: 32px;
         font-weight: 400;
-        padding: 15% 5% 0% 5%;
+        margin-bottom: 0;
     }
-    
+
+    h3{
+        font-weight: 300;
+        font-size: 18px;
+        margin-top: 0;
+    }
+            
     blockquote{
         font-weight: 300;
-        padding: 0% 5% 5% 5%;
+        line-height: 1.5;
     }
 }
 
 //Section 6 - Footer
 footer{
+    margin-top: 30px;
     width: 100%;
     background-image: url(/images/img10.jpeg);
     background-position: 50% 80%;
@@ -332,9 +424,8 @@ footer{
     height: 500px;
     overflow:hidden;
     
-
     .footer-container{
-        height:75%;
+        height:80%;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -342,6 +433,10 @@ footer{
 
     a{
         padding: 15px;
+        &:hover{
+            background-color: rgba($fBlack,0.5);
+            transition: all 0.5s 0s ease-in-out;
+        }
     }
 
     img{
@@ -351,10 +446,9 @@ footer{
         font-size: 36px;
         font-weight: 400;
         text-align: center;
-        margin-bottom: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
-
-    
 }
 
 
@@ -370,7 +464,7 @@ footer{
     h4{
         margin-top: 50px;
         color: $fWhite;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 22px;
     }
 
@@ -384,3 +478,7 @@ footer{
         text-decoration: none;
     }
     }
+
+
+
+    @import 'responsive';

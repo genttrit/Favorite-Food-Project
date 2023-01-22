@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", "sans-serif";
@@ -16,27 +20,36 @@ header {
 header .headcontainer {
   padding: 5px;
   border: 1px solid #c0c0c0;
-  height: 7vh;
-}
-header nav {
-  width: 70%;
-  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 header input {
-  margin-left: 40px;
+  margin-left: 20px;
   height: 5vh;
   font-size: 1rem;
-  width: 25%;
+  display: inline;
   border: 1px solid #c0c0c0;
   background-color: transparent;
+}
+header nav {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  margin: 0;
+}
+header img {
+  visibility: hidden;
+  position: absolute;
+  top: 5px;
+  left: 20px;
 }
 header ul {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
+  margin: 5px 0;
 }
 header li {
-  padding-left: 20px;
+  padding-left: 5px;
 }
 header a {
   text-decoration: none;
@@ -60,7 +73,6 @@ header h1 {
 }
 header .childTitle1 {
   background-color: #ffffff;
-  position: relative;
   display: inline-block;
   padding-right: 1%;
   z-index: 0;
@@ -71,86 +83,108 @@ header .childTitle2 {
   background-color: #f1c50e;
   display: inline-block;
   padding-right: 1%;
-  z-index: 1;
   position: absolute;
   bottom: 75px;
 }
 
-#about .about {
+#menu .about {
   font-weight: 500;
-  height: 100vh;
+  height: 94vh;
   background-color: #ffffff;
-  position: relative;
+  margin: 3% auto;
 }
-#about .about .bg-1 {
+#menu .menuContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#menu .bg-1 {
   background-color: #f1c50e;
   height: 90vh;
-  width: 40%;
-  margin: 5% auto;
-}
-#about .about summary {
-  border: 5px solid #000000;
-  background-color: #ffffff;
-  letter-spacing: 2px;
-  padding: 30px;
-  width: 28%;
+  width: 50%;
   position: absolute;
-  margin: 0 auto;
-  left: 5%;
-  top: 25%;
+  left: 25%;
 }
-#about .about h1 {
-  font-size: 2rem;
-  font-weight: 400;
-}
-#about .about blockquote {
-  font-weight: 300;
-  font-size: 1rem;
-}
-#about .about img {
-  height: 80vh;
-  position: absolute;
-  right: 28%;
-  top: 5%;
-}
-
-.aboutflex {
+#menu .menuflex {
   width: 100%;
-  height: 300px;
-  margin-bottom: 10vh;
+  height: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: #ffffff img;
-  background-color-width: 350px;
+  align-items: center;
 }
-.aboutflex .quotettext {
+#menu summary {
   border: 5px solid #000000;
   background-color: #ffffff;
-  padding: 10px;
+  letter-spacing: 1px;
+  padding: 20px;
   width: 350px;
+  height: 300px;
+  z-index: 1;
 }
-.aboutflex h2 {
+#menu h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+#menu p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+#menu img {
+  height: 550px;
+  z-index: 1;
+}
+
+#varieties .varieties-container {
+  width: 1300px;
+  height: 300px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 25px auto;
+}
+#varieties .child {
+  width: 350;
+  height: 315px;
+  height: 300px;
+  object-fit: cover;
+}
+#varieties .childimg {
+  overflow: hidden;
+}
+#varieties img {
+  height: 315px;
+}
+#varieties .childtext {
+  border: solid 5px black;
+}
+#varieties h3 {
   font-size: 24px;
   font-weight: 400;
-  padding: 15% 5% 5% 5%;
+  padding: 25px 25px 0 25px;
+  line-height: 1.3;
 }
-.aboutflex blockquote {
-  font-weight: 300;
-  padding: 0% 5%;
+#varieties blockquote {
+  font-weight: 400;
+  padding: 0 25px;
+  margin: 0;
+  line-height: 1.9;
 }
 
 .theChange {
-  width: 100%;
+  width: 1300px;
   height: 100vh;
+  margin: 0 auto;
   background-image: url(/images/img5.jpeg);
   background-size: 100%;
-  background-position: 50% 90%;
+  background-position: 50% 100%;
   display: flex;
   flex-direction: column-reverse;
-  padding: 50px 50px;
+  padding: 0px 50px;
 }
 .theChange summary {
-  width: 43%;
+  width: 600px;
   margin-bottom: 50px;
 }
 .theChange h2 {
@@ -162,112 +196,127 @@ header .childTitle2 {
 }
 .theChange blockquote {
   font-size: 16;
+  margin: 0;
 }
 
-.tasty {
+#tasty .tasty-container {
   font-weight: 500;
-  height: 90vh;
+  height: 500px;
+  width: 100%;
   background-color: #ffffff;
-  margin-top: 10vh;
+  margin-top: 30px;
   position: relative;
 }
-.tasty .bg-2 {
+#tasty .tasty-bg {
   background-color: #f1c50e;
-  height: 200px;
   width: 100%;
-  background-position: center center;
+  height: 250px;
+  margin: auto 0;
   position: absolute;
-  top: 15%;
+  top: 125px;
 }
-.tasty img {
-  width: 300px;
-  z-index: 1;
-}
-.tasty .img-container {
-  width: 100%;
+#tasty .tasty-parent {
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
-.tasty summary {
+#tasty img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 55%;
+  scale: 1.1;
+}
+#tasty .tasty-child {
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+#tasty summary {
   width: 50%;
   margin: 10px auto;
   line-height: 1.1;
   text-align: center;
 }
-.tasty h4 {
+#tasty h2 {
   font-size: 36px;
-  font-weight: 300;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  font-weight: 400;
 }
-.tasty blockquote {
-  font-size: 16;
+#tasty blockquote {
+  font-size: 16px;
   font-weight: 300;
   padding-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
-.tasty button {
+#tasty button {
   color: #ffffff;
   background-color: #000000;
   padding: 10px 10px;
   letter-spacing: 1px;
-  width: 150px;
+  width: 200px;
   margin-bottom: 50px;
 }
-.tasty button:hover {
+#tasty button:hover {
   background-color: #ffffff;
   color: #000000;
   transition: all 0.5s 0s ease-in-out;
 }
 
 #organic {
-  margin-top: 100px;
+  background-color: #ffffff;
 }
-#organic .organic {
+#organic .organic-parent {
   width: 100%;
   height: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
 }
-#organic .bg-3 {
-  display: inline-block;
-  background-image: url(/images/img8.jpeg);
-  width: 450px;
+#organic .organic-child {
+  width: 400px;
   height: 400px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: -50px;
+  margin: auto 0;
 }
-#organic .bg-4 {
-  background-image: url(/images/img9.jpeg);
-  display: inline-block;
-  width: 450px;
+#organic img {
   height: 400px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: -50px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: 20% 50%;
 }
-#organic .quotettext {
+#organic .organic-text {
   border: 5px solid #000000;
-  background-color: #ffffff;
   width: 450px;
-  height: 75%;
+  height: 400px;
   text-align: center;
 }
+#organic .organic-text img {
+  width: 50px;
+  height: auto;
+  margin: 0;
+}
 #organic h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
-  padding: 15% 5% 0% 5%;
+  margin-bottom: 0;
+}
+#organic h3 {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 0;
 }
 #organic blockquote {
   font-weight: 300;
-  padding: 0% 5% 5% 5%;
+  line-height: 1.5;
 }
 
 footer {
+  margin-top: 30px;
   width: 100%;
   background-image: url(/images/img10.jpeg);
   background-position: 50% 80%;
@@ -277,13 +326,17 @@ footer {
   overflow: hidden;
 }
 footer .footer-container {
-  height: 75%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 footer a {
   padding: 15px;
+}
+footer a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s 0s ease-in-out;
 }
 footer img {
   height: 30px;
@@ -292,7 +345,8 @@ footer h4 {
   font-size: 36px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-end {
@@ -306,7 +360,7 @@ footer h4 {
 .footer-end h4 {
   margin-top: 50px;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 22px;
 }
 .footer-end span {
@@ -316,4 +370,76 @@ footer h4 {
 .footer-end a {
   color: #ffffff;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  header nav {
+    display: none;
+  }
+  header ul {
+    display: none;
+  }
+  header img {
+    visibility: visible;
+    position: relative;
+    left: 50px;
+    top: 5px;
+  }
+  header .img-container {
+    padding: 10px 0 0 0;
+    display: inline-block;
+  }
+  #menu .about {
+    font-weight: 500;
+    height: 80vh;
+    background-color: #ffffff;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  #menu .menuContainer {
+    background-color: red;
+    position: static;
+    width: 100%;
+    height: 800px;
+  }
+  #menu .bg-1 {
+    background-color: #f1c50e;
+    height: 400px;
+    width: 70%;
+    background-position: center center;
+    position: relative;
+  }
+  #menu .menuflex {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #menu summary {
+    border: 5px solid #000000;
+    background-color: #ffffff;
+    letter-spacing: 1px;
+    padding: 20px;
+    width: 350px;
+    height: 300px;
+    z-index: 1;
+  }
+  #menu h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+  }
+  #menu p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  #menu img {
+    height: 550px;
+    z-index: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

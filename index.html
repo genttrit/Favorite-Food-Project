@@ -10,50 +10,56 @@
 <body>
 <header id="home">
     <div class="headcontainer">
-            <input type="text" placeholder="Search..">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#varieties">Varieties</a></li>
-                </ul>
-            </nav>
-        </div>
+        <input type="text" placeholder="Search..">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#varieties">Varieties</a></li>
+                <li><a href="#difference">Difference</a></li>
+                <li><a href="#tasty">Tasty</a></li>
+                <li><a href="#contactus">Contact us</a></li>
+            </ul>
+        </nav>
+        <img src="/images/menu.png" alt="">
+    </div>
     <div class="parentTitle">
         <h1 class="childTitle1">YOUR FAVORITE FOOD</h1>      
         <h1 class="childTitle2">MAKE IT GOOD</h1>
     </div>
 </header>
-<section id="about">
-    <div class="about">
-    <div class="bg-1">
-    </div>
-    
-    <summary>
-        <h1>Cafe Food Menu</h1>
-        <blockquote>All of our food is prepared by our team of trained kitchen staff from the sealed glass kitchen where you can see your food being made, without risk of little paws getting involved.</blockquote>
-    </summary>
 
-    <img src="/images/img2.jpg">
+<section id="menu">
+    <div class="about">
+    <div class="menuContainer">
+        <div class="bg-1"></div>
+
+        <div class="menuflex">
+            <summary>
+                <h1>Cafe Food Menu</h1>
+                <p>All of our food is prepared by our team of trained kitchen staff from the sealed glass kitchen where you can see your food being made, without risk of little paws getting involved.</p>
+            </summary>
+
+            <img src="/images/img2.jpg">
+        </div>
     </div>
 </section>
 
 <section id="varieties">
-    <div class="aboutflex">
-        <img src="/images/img3.jpeg">
-        <div class="quotettext">
-            <h2 class="qtTitle">Have a healthy afternoon snack</h2>
+    <div class="varieties-container">
+        <div class="child childimg"><img src="/images/img3.jpeg" alt=""></div>
+        <div class="child childtext">
+            <h3>Have a healthy afternoon snack</h3>
             <blockquote>The majority of people in the working world are likely familiar with the mid-afternoon slump.</blockquote>
         </div>
-        <img src="/images/img4.jpeg" alt="">
-        <div class="quotettext">
-            <h2 class="qtTitle">Include lots of fibre in your diet</h2>
-            <blockquote>Fibre is known to help aid with digestion. However, that's not its only benefit.</blockquote>
+        <div class="child childimg"><img src="/images/img4.jpeg" alt=""></div>
+        <div class="child childtext"><h3>Include lots of fibre in your diet</h3>
+            <blockquote>Fibre is known to help aid with digestion. However, that’s not its only benefit.</blockquote>
         </div>
-    </div> 
+    </div>     
 </section>
 
-<section id="">
+ <section id="difference">
     <div class="theChange">
         <summary>
         <h2>Time to Make a Difference</h2>
@@ -63,15 +69,16 @@
 </section>
 
 <section id="tasty">
-    <div class="tasty">
-        <div class="bg-2">
+    <div class="tasty-container">
+        <div class="tasty-bg"></div>
+        <div class="tasty-parent">
+            <div class="tasty-child"><img src="/images/img6.jpeg" alt=""></div>
+            <div class="tasty-child"><img src="/images/img7.jpeg" alt=""></div>
         </div>
-        <div class="img-container">
-            <img class="img6" src="/images/img6.jpeg">
-            <img class="img7" src="/images/img7.jpeg">
-        </div>
+
+    </div>
         <summary>
-            <h4>Which is the tastiest food?</h4>
+            <h2>Which is the tastiest food?</h2>
             <blockquote>The world's most delicious food is not Massaman curry, as we suggested, but a meaty, spicy, gingery dish from west Sumatra. "There is no love sincerer than the love of food," George Bernard Shaw said. Judging by the number of amazing dishes out there, he was right.</blockquote>
             <button>READ MORE</button>
         </summary>
@@ -80,31 +87,37 @@
 
 
 <section id="organic">
-    <div class="organic">
-        <div class="bg-3"></div>   
-        <div class="quotettext">
-            <h2 class="qtTitle">Restaurant</h2>
-            <blockquote>ORGANIC FARM</blockquote>
-            <!-- <img src="/images/img11.png" alt=""> -->
-            <blockquote>The majority of people in the working world are likely familiar with the mid-afternoon slump.</blockquote>
-            <blockquote>– LOO HUDSON</blockquote>
+    <div class="organic-container">
+        <div class="organic-parent">
+            <div class="organic-child"><img class="img-aside" src="/images/img8.jpeg" alt=""></div>
+            <div class="organic-child organic-text">
+                <h2>Restaurant</h2>
+                <h3>ORGANIC FARM</h3>
+                <img src="/images/img11.png" alt="">
+                <blockquote>We bring the season’s best mix of organic produce and hand-crafted farm products conveniently to your door by growing and partnering with local farms and artisans in your area.</blockquote>
+                <blockquote> – LOO HUDSON</blockquote>
+            </div>
+            <div class="organic-child"><img src="/images/img9.jpeg" alt=""></div>
         </div>
-        <div class="bg-4"></div>
-    </div> 
+    </div>
 </section>
 
-<footer>
+
+
+<footer id="#">
     <div class="footer-container">
         <a href="#" ><img src="/images/facebook.png" alt="Facebook"></a>
         <a href="#" ><img src="/images/twitter.png" alt="Facebook"></a>
         <a href="#" ><img src="/images/instagram.png" alt="Facebook"></a>
     </div>
-    <div class="footer-text">
-        <h4>Enjoy Morning Time</h4>
-    </div>
+   
+    <h4>Enjoy Morning Time</h4>
+    
     
 </footer>
-<div class="footer-end">
+
+
+<div id="contactus"class="footer-end">
     <h4>Contact us:</h4> <br>
     <span><a href="tel:+38344500500">Mobile:+38344500500</a></span>
     <span><a href="tel:+38338500500">Mobile:+38344500500</a></span>
