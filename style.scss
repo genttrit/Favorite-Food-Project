@@ -63,8 +63,6 @@ header{
        color:$fBlack;
        padding:10px 10px;
        border-radius: 15%;
-       
-       
        &:hover{
            background-color: $fBlack;
            color:$fWhite;
@@ -77,12 +75,10 @@ header{
         height: 90vh;
         line-height: 1.5;
     }
-
     h1{
         font-size: 36px;
         letter-spacing: 2px;
     }
-
     .childTitle1{
         background-color: $bwhite;
         //position:relative; //me provu dyjat absolut
@@ -103,15 +99,19 @@ header{
     }
 }
 
-
 //Section 1 - About us
 #menu{
-    .about{
     font-weight: 500;
     height: 94vh;
     background-color: $bwhite;
     margin: 3% auto;
-    }
+
+    // .about{
+    // font-weight: 500;
+    // height: 94vh;
+    // background-color: $bwhite;
+    // margin: 3% auto;
+    // }
     .menuContainer{
         position: relative;
         width: 100%;
@@ -130,6 +130,7 @@ header{
         width:100%;
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content:space-around;
         align-items: center;
     }
@@ -157,8 +158,9 @@ header{
     }
 
     img{
+        width: auto;
         height: 550px;
-        z-index:1;
+        z-index:5;
     }
 }
 
@@ -176,7 +178,7 @@ header{
     .child{
         width: 350;
         height: 315px;
-        height: 300px;
+        // height: 300px;
         object-fit: cover;
     }
 
@@ -205,42 +207,6 @@ header{
         margin: 0;
         line-height: 1.9;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-// .aboutflex{
-//     width:100%;
-//     height: 300px;
-//     margin-bottom: 10vh;
-//     display: grid;
-//     grid-template: 1fr / repeat(4,1fr);
-//     justify-content:space-around; //space-between del error
-//     background-color: $bwhite;
-//     }       
-    // img{
-    //     width: 100%;
-    //     height:auto;
-    // }
-    // .quotettext{
-    //     border: 5px solid $fBlack;
-    //     background-color: $bwhite;
-    //     padding: 10px;
-    //     width: 25%;
-    //     //font-weight: 100;
-    
-    // }
-    
-  
-
 }
 
 //Section 3 - Time to make a differences
@@ -297,12 +263,12 @@ header{
     }
 
     .tasty-parent{
-        width: 1000px;
+        width: 100%;
         height: 500px;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     img{
         object-fit: cover;
@@ -392,12 +358,14 @@ header{
             width: 50px;
             height: auto;
             margin: 0;
+            margin-bottom: 10px;
         }
     }
 
     h2{
         font-size: 32px;
         font-weight: 400;
+        margin-top: 80px;
         margin-bottom: 0;
     }
 
@@ -405,6 +373,7 @@ header{
         font-weight: 300;
         font-size: 18px;
         margin-top: 0;
+        margin-bottom: 10px;
     }
             
     blockquote{
@@ -454,13 +423,10 @@ footer{
 
 .footer-end{
     background-color:$bGrey;     
-    //height: 100px;
     width: 100%;
     padding-top:5px;
     padding-bottom: 30px;
-//    margin-top: 50px;
     text-align: center;
-    font-size: 14px;
     h4{
         margin-top: 50px;
         color: $fWhite;

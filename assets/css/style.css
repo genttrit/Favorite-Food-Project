@@ -87,7 +87,7 @@ header .childTitle2 {
   bottom: 75px;
 }
 
-#menu .about {
+#menu {
   font-weight: 500;
   height: 94vh;
   background-color: #ffffff;
@@ -109,6 +109,7 @@ header .childTitle2 {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -132,8 +133,9 @@ header .childTitle2 {
   line-height: 1.7;
 }
 #menu img {
+  width: auto;
   height: 550px;
-  z-index: 1;
+  z-index: 5;
 }
 
 #varieties .varieties-container {
@@ -147,7 +149,6 @@ header .childTitle2 {
 #varieties .child {
   width: 350;
   height: 315px;
-  height: 300px;
   object-fit: cover;
 }
 #varieties .childimg {
@@ -216,12 +217,12 @@ header .childTitle2 {
   top: 125px;
 }
 #tasty .tasty-parent {
-  width: 1000px;
+  width: 100%;
   height: 500px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #tasty img {
   object-fit: cover;
@@ -299,16 +300,19 @@ header .childTitle2 {
   width: 50px;
   height: auto;
   margin: 0;
+  margin-bottom: 10px;
 }
 #organic h2 {
   font-size: 32px;
   font-weight: 400;
+  margin-top: 80px;
   margin-bottom: 0;
 }
 #organic h3 {
   font-weight: 300;
   font-size: 18px;
   margin-top: 0;
+  margin-bottom: 10px;
 }
 #organic blockquote {
   font-weight: 300;
@@ -355,7 +359,6 @@ footer h4 {
   padding-top: 5px;
   padding-bottom: 30px;
   text-align: center;
-  font-size: 14px;
 }
 .footer-end h4 {
   margin-top: 50px;
@@ -373,11 +376,10 @@ footer h4 {
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    width: 100%;
-  }
   header nav {
-    display: none;
+    width: 100px;
+    position: absolute;
+    right: 5px;
   }
   header ul {
     display: none;
@@ -385,61 +387,162 @@ footer h4 {
   header img {
     visibility: visible;
     position: relative;
-    left: 50px;
-    top: 5px;
   }
-  header .img-container {
-    padding: 10px 0 0 0;
-    display: inline-block;
-  }
-  #menu .about {
-    font-weight: 500;
-    height: 80vh;
-    background-color: #ffffff;
-    margin: 50px auto;
-    overflow: hidden;
+  #menu {
+    width: 100%;
   }
   #menu .menuContainer {
-    background-color: red;
-    position: static;
-    width: 100%;
+    position: relative;
     height: 800px;
+    background-color: red;
+    overflow: hidden;
   }
   #menu .bg-1 {
-    background-color: #f1c50e;
-    height: 400px;
-    width: 70%;
-    background-position: center center;
-    position: relative;
+    height: 500px;
+    width: 80%;
+    position: absolute;
+    left: 10%;
   }
   #menu .menuflex {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    justify-content: space-around;
-    align-items: center;
-  }
-  #menu summary {
-    border: 5px solid #000000;
-    background-color: #ffffff;
-    letter-spacing: 1px;
-    padding: 20px;
-    width: 350px;
-    height: 300px;
-    z-index: 1;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 50px;
   }
   #menu h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    padding-bottom: 20px;
+    font-size: 1.85rem;
   }
   #menu p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  #menu summary {
+    width: 350px;
   }
   #menu img {
-    height: 550px;
-    z-index: 1;
+    width: 300px;
+    height: auto;
+  }
+  #varieties {
+    margin-top: 200px;
+  }
+  #varieties .varieties-container {
+    width: 340px;
+    height: auto;
+    display: grid;
+    gap: 30px;
+    grid-template: repeat(4, 1fr)/1fr;
+  }
+  #varieties .child {
+    width: 340px;
+    height: 340px;
+  }
+  #varieties .childtext {
+    height: 300px;
+  }
+  #varieties h3 {
+    font-size: 1.5 rem;
+    line-height: 1.2;
+    padding-top: 50px;
+  }
+  #varieties blockquote {
+    padding: 20px 30px 0px 30px;
+    font-size: 1rem;
+  }
+  .theChange {
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    background-image: url(/images/img5.jpeg);
+    background-size: 170%;
+    background-position: 0% 50%;
+    padding: 0px 20px;
+  }
+  .theChange summary {
+    width: 220px;
+    margin-bottom: 20px;
+  }
+  .theChange h2 {
+    font-size: 1.75rem;
+  }
+  .theChange blockquote {
+    font-size: 14px;
+    margin: 0;
+  }
+  #tasty .tasty-bg {
+    width: 60%;
+    height: 200px;
+    margin: auto 0;
+    position: absolute;
+    left: 20%;
+    top: 50px;
+  }
+  #tasty .tasty-parent {
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #tasty .tasty-child {
+    width: 250px;
+    height: auto;
+  }
+  #tasty summary {
+    margin-top: 200px;
+    width: 340px;
+  }
+  #tasty button {
+    width: 150px;
+  }
+  #organic .organic-parent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+  }
+  #organic .organic-child {
+    width: 320px;
+    height: 340px;
+    margin: auto 0;
+  }
+  #organic h2 {
+    margin-top: 40px;
+  }
+  #organic .organic-child9 {
+    margin-top: -60px;
+  }
+  #organic blockquote {
+    font-weight: 400;
+  }
+  footer {
+    margin-top: 100px;
+  }
+  footer .footer-container {
+    background-size: contain;
+    width: auto;
+  }
+  footer img {
+    height: 20px;
+  }
+  footer h4 {
+    font-size: 2rem;
+  }
+  #contactus {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    margin: 0 auto;
+  }
+  #contactus h4 {
+    margin-top: 0px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+  }
+  #contactus span {
+    font-size: 12px;
+    padding: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

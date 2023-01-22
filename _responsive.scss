@@ -1,9 +1,11 @@
 @media screen and (max-width: 768px){
     //HOME
     header{ 
-        width: 100%;
+        
         nav{
-            display: none;
+            width: 100px;
+            position: absolute;
+            right: 5px;
         }
         ul{
             display:none;
@@ -11,88 +13,214 @@
         img{
             visibility:visible;
             position: relative;
-            left: 50px;
-            top: 5px;
-        }
-        .img-container{
-            padding: 10px 0 0 0;
-            display: inline-block;
         }
     }
 
+    //Section 1 - MENU
     #menu{
-        .about{
-        font-weight: 500;
-        height: 80vh;
-        background-color: $bwhite;
-        margin: 50px auto;
-        overflow: hidden;
-        }
-        //
+        width: 100%;
+
         .menuContainer{
-            background-color: red;
-            position: static;
-            width: 100%;
-            height: 800px;
-        }
-    
-        .bg-1{
-            background-color: $byellow;
-            height: 400px;
-            width: 70%;
-            //margin: 10px auto;
-            background-position: center center;
             position: relative;
+            height: 800px;
+            background-color: red;
+            overflow: hidden;
         }
-    
+        .bg-1{
+            height: 500px;
+            width: 80%;
+            //margin: 0 auto;
+            position:absolute;
+            left: 10%;
+        }
+
         .menuflex{
-            width:100%;
-            height: 100%;
-            //display: flex;
-            display:inline-block;
-            justify-content:space-around;
-            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 50px;
         }
-    
-        summary{
-            border: 5px solid $fBlack;
-            background-color: $bwhite;
-            letter-spacing: 1px;
-            padding: 20px;
-            width: 350px;
-            height: 300px;
-            z-index: 1;
-        }
-    
+
         h1{
-            font-size: 2rem;
-            font-weight: 400;
-            padding-bottom: 20px;
+            font-size: 1.85rem;
         }
     
         p{
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 1.7;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        summary{
+            width: 350px;
+        }
+
+        img{
+            width: 300px;
+            height: auto;
+        }
+        
+    }
+
+    //Section 2 - About part2
+    #varieties{
+        margin-top: 200px;
+        .varieties-container{
+            width: 340px;
+            height: auto;
+            display: grid;
+            gap:30px;
+            grid-template: repeat(4,1fr)/1fr;
+            // margin: 25px auto; 
+        }
+        
+        .child{
+            width: 340px;
+            height: 340px;
+        }
+        .childtext{
+            height: 300px;
+        }
+
+        h3{
+            font-size: 1.5 rem;
+            line-height: 1.2;
+            padding-top: 50px;
+        }
+
+        blockquote{
+            padding: 20px 30px 0px 30px;
+            font-size: 1rem;
         }
     
-        img{
-            height: 550px;
-            z-index:1;
+    }
+
+    //Section 3 - Difference
+    .theChange{
+        width:100%;
+        height: 60vh;
+        margin: 0 auto;
+        background-image: url(/images/img5.jpeg);
+        background-size:170%;
+        background-position: 0% 50%;
+        padding: 0px 20px;
+    
+        summary{
+            width: 220px;
+            margin-bottom: 20px;
         }
+    
+        h2{
+            font-size: 1.75rem;
+        }
+    
+        blockquote{
+            font-size: 14px;
+            margin: 0;
+        }
+    
+    }
+
+    //Section 4 - TASTY
+    #tasty{
+
+        .tasty-bg{
+            width: 60%;
+            height: 200px;
+            margin: auto 0;
+            position: absolute;
+            left: 20%;
+            top:50px;
+        }
+    
+        .tasty-parent{
+            width: 500px;
+            height: auto;
+            //margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            // flex-wrap: wrap;
+            // align-items: center;
+            // justify-content: space-between;
+        }
+        
+        .tasty-child{
+        width: 250px;
+        height: auto;
+        }
+        
+        summary{
+            margin-top: 200px;
+            width: 340px;
+        }
+
+        button{
+            width: 150px;
+        }
+
     }
 
 
+    //Section 5 - Organic
+    #organic{
+        .organic-parent{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap:80px;
+        }
+        .organic-child{
+            width: 320px;
+            height: 340px;
+            margin: auto 0;
+        }
 
+        h2{
+            margin-top: 40px;
+        }
 
+        .organic-child9{
+            margin-top: -60px;
+        }
 
+        blockquote{
+            font-weight: 400;
+        }
+    }
 
+    footer{
+        margin-top: 100px;
+        
+        .footer-container{
+            background-size: contain;
+            width: auto;
+            //background-size: 60%;
+        // background-size: 90%;
+        }
+        img{
+            height: 20px;
+        }
+        h4{
+            font-size: 2rem;
+        }
+    }
 
+    #contactus{
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+        margin: 0 auto;
 
-
-
-
-
-
-
-}
+        h4{
+            margin-top: 00px;
+            padding-bottom: 5px;
+            font-size: 1rem;
+        }
+        span{
+            font-size: 12px;
+            padding: 10px;
+        }
+    }
+}   
